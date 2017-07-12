@@ -1,0 +1,86 @@
+@import "variables.scss";
+
+.bottom-panel {
+  /* .window-button-icon height +
+     .window-button vertical padding +
+     .window-button > StWidget vertical padding) */
+  height: 2.25em;
+}
+
+.window-list {
+  spacing: 2px;
+  font-size: 10pt;
+}
+
+.window-button {
+  padding: 1px;
+}
+
+.window-button:first-child:ltr {
+  padding-left: 2px;
+}
+
+.window-button:last-child:rtl {
+  padding-right: 2px;
+}
+
+.window-button-box {
+  spacing: 4px;
+}
+
+.window-button > StWidget {
+  -st-natural-width: $window-width;
+  max-width: $window-width;
+  color: $text-color;
+  background-color: $color-main;
+  border-radius: $border-radius;
+  padding: 3px 6px 1px;
+  box-shadow: inset 1px 1px $border-radius $border-color;
+  text-shadow: 1px 1px $border-radius rgba(0,0,0,0.8);
+}
+
+.window-button:hover > StWidget {
+  color: $text-color-active;
+  background-color: $color-main-hover;
+}
+
+.window-button:active > StWidget,
+.window-button:focus > StWidget {
+  box-shadow: inset 2px 2px $border-radius $border-color;
+}
+
+.window-button.focused > StWidget {
+  color: $text-color-active;
+  box-shadow: inset 1px 1px $border-radius $border-color-active;
+}
+
+.window-button.focused:active > StWidget {
+  box-shadow: inset 2px 2px $border-radius $border-color-active;
+}
+
+.window-button.minimized > StWidget {
+  color: $text-color-minimized;
+  box-shadow: inset -1px -1px $border-radius $border-color;
+}
+
+.window-button.minimized:active > StWidget {
+  box-shadow: inset -2px -2px $border-radius $border-color;
+}
+
+.window-button-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.window-list-workspace-indicator {
+  padding: 3px;
+}
+
+.window-list-workspace-indicator > StWidget {
+  background-color: rgba(200, 200, 200, .3);
+  border: 1px solid #cccccc;
+}
+
+.notification {
+  font-weight: normal;
+}
